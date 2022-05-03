@@ -1,0 +1,54 @@
+
+<div class="container">
+<form class="row g-3" style="background-color: beige" (ngSubmit)="onSubmit()" #studentForm="ngForm">
+  <div class="col-md-2">
+    <label for="inputNumber" class="form-label">Student ID</label>
+    <input type="text" class="form-control" id="student_id" name="student_id" [(ngModel)]="student.student_id">
+  </div>
+  <div class="col-md-2">
+    <label for="inputName" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="student.name">
+  </div>
+  <div class="col-md-2">
+    <label for="inputNumber" class="form-label">Roll Number</label>
+    <input type="number" class="form-control" id="roll_no" name="roll_no" [(ngModel)]="student.roll_no">
+  </div><br>
+  <div class="col-md-2">
+    <label for="inputClass" class="form-label">Class</label>
+    <select id="student_class" name="student_class" class="form-select" [(ngModel)]="student.student_class">
+      <option selected>Choose...</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+    </select>
+  </div>
+  <label for="inputSubjects" class="form-label">Subjects</label> 
+  <h5>Subjects</h5>
+   <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="subject.hindi" name="subject.hindi" [(ngModel)]="student.subject.hindi">
+    <label class="form-check-label" for="inlineCheckbox1">Hindi</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="subject.english" name="subject.english" [(ngModel)]="student.subject.english">
+    <label class="form-check-label" for="inlineCheckbox2">English</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="subject.math" name="subject.math" [(ngModel)]="student.subject.math">
+    <label class="form-check-label" for="inlineCheckbox3">Math</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="subject.science" name="subject.science" [(ngModel)]="student.subject.science">
+    <label class="form-check-label" for="inlineCheckbox4">Science</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="subject.computer" name="subject.computer" [(ngModel)]="student.subject.computer">
+    <label class="form-check-label" for="inlineCheckbox5">Computer</label>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div>
